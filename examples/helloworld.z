@@ -3,3 +3,7 @@ pkg io.github.basiccorruption.z_lang.examples;
 plc mod helloworld:
   plc func start:
     println "Hello world!";
+    set ax, "Hi!";
+    println ax;
+  end start;
+end helloworld;
