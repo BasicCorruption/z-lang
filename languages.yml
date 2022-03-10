@@ -1,0 +1,8 @@
+Z:
+  type: programming
+  color: "#814CCC"
+  extensions:
+  - ".z"
+  tm_scope: main.z
+  ace_mode: text
+  language_id: 0
