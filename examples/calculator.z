@@ -2,7 +2,11 @@
 ++ arg2 - operator ++
 ++ arg3 - input 2 ++
 
+++ error message ++
+def ax, "No operator provided. Please type 'plus' 'minus' 'times' or 'divided by' for the second argument."
+
 #arg2 "plus": prntln sum arg1, arg3
 #arg2 "minus": prntln diff arg1, arg3
 #arg2 "times": prntln prod arg1, arg3
 #arg2 "divided by": prntln quot arg1, arg3
+#!arg2 "plus","minus","times","divided by": prntln ax
