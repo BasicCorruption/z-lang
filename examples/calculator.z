@@ -1,1 +1,8 @@
 ++ arg1 - input 1 ++
+++ arg2 - operator ++
+++ arg3 - input 2 ++
+
+#arg2 "plus": prntln sum arg1, arg3
+#arg2 "minus": prntln diff arg1, arg3
+#arg2 "times": prntln prod arg1, arg3
+#arg2 "divided by": prntln quot arg1, arg3
