@@ -1,12 +1,18 @@
-++ arg1 - input 1 ++
-++ arg2 - operator ++
-++ arg3 - input 2 ++
+has Math;
 
-++ error message ++
-def ax, "No operator provided. Please type 'plus' 'minus' 'times' or 'divided by' for the second argument."
-
-#arg2 "plus": prntln sum arg1, arg3
-#arg2 "minus": prntln diff arg1, arg3
-#arg2 "times": prntln prod arg1, arg3
-#arg2 "divided by": prntln quot arg1, arg3
-#!arg2 "plus","minus","times","divided by": prntln ax
+mod Program(args oftype string[]) oftype integer
+  ++ get equation from cli arguments ++
+  cl.write: Math.solve: "$(args[0]) $(args[1]) $(args[2])";
+  
+  ++ get equation from prompts ++
+  tdec string x;
+  tdec string op;
+  tdec string y;
+  
+  cl.get: "First number: ", x;
+  cl.get: "Operator: ", op;
+  cl.get: "Second number: ", y;
+  
+  cl.write: Math.solve: "$(t::x) $(t::op) $(t::y)";
+  tend;
+end mod Program
