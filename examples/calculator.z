@@ -1,18 +1,11 @@
-has Math;
+import math
+import io
 
-mod Program(args oftype string[]) oftype integer
-  ++ get equation from cli arguments ++
-  cl.write: Math.solve: "$(args[0]) $(args[1]) $(args[2])";
-  
-  ++ get equation from prompts ++
-  tdec string x;
-  tdec string op;
-  tdec string y;
-  
-  cl.get: "First number: ", x;
-  cl.get: "Operator: ", op;
-  cl.get: "Second number: ", y;
-  
-  cl.write: Math.solve: "$(t::x) $(t::op) $(t::y)";
-  tend;
-end mod Program
+io.log("Welcome to the calculator!")
+var first = io.input("Please enter the first number: ")
+var second = io.input("Please enter the second number: ")
+var operator = io.input("Please enter the operator: ")
+
+var result = math.solve(first, operator, second)
+
+console.log("The result is: " & result)

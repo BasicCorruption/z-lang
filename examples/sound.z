@@ -1,0 +1,6 @@
+import sound
+import wait
+
+sound.play_sound('./test.mp3')
+wait(1)
+sound.play_sound('./test2.mp3')

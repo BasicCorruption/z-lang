@@ -1,0 +1,40 @@
+import math
+import graphics
+import ctools
+import screenmanip
+
+assign Config as graphics.Config;
+assign Header as graphics.Header;
+assign Window as graphics.Window;
+assign Position as math.Position;
+
+==This configures the window
+static Config config() {
+    return new Config().width(640).height(360);
+}
+
+== This is the header
+static Header makeHeader() {
+    return new Header().title("Hello World").version(1).author("John Doe");
+}
+
+== This is the function that combines the header and config into a window
+public static Window getWindow() {
+    return new Window({
+        mainCanvasConfig: config(),
+        header: makeHeader()
+    })
+}
+
+var window = getWindow();
+
+== This is the function to load the window
+window.load({
+    display: function() { return screenmanip.Info().getDisplayInfo().getMainDisplay() },
+    position: function() {
+        private final posX = screenmanip.Info().getDisplayInfo().mainDisplay().getWidth() - (config().getWidth() / 2)
+        private final posY = screenmanip.Info().getDisplayInfo().mainDisplay().getHeight() - (config().getHeight() / 2)
+
+        return new Position(posX, posY);
+    }
+})

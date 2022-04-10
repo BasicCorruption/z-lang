@@ -1,0 +1,13 @@
+import io
+import wait
+import add ansi
+
+io.log(io.ansi.red("Cool red text!"))
+
+wait(1)
+
+var green = io.ansi.green
+
+io.log(green("Showing off variable color assignment!"))
+
+exit()
