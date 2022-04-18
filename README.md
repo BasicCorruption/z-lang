@@ -1,2 +1,3 @@
 # z-lang
-A simple programming language for making simple CLI applications
+
+A simple programming language for making simple applications
